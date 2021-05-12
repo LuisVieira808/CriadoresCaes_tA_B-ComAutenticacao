@@ -9,9 +9,10 @@
 </head>
 <body>
     <header>
+        @*barra de navegação*@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CriadoresCaes_tA_B</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Criadores de Cães</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,28 +20,35 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Criadores" asp-action="Index">Criadores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Fotografias" asp-action="Index">Fotografias</a>
                         </li>
                     </ul>
+                    @*partial ---> invoca uma 'vista' parcial*@
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
+    @*parte 'central' da pagina que é apresentada ao utilizador*@
     <div class="container">
         <main role="main" class="pb-3">
+            @*É neste sitio que o codigo de cada view é apresentado*@
             @RenderBody()
         </main>
     </div>
 
+    @**@
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - CriadoresCaes_tA_B - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - Criadores de Cães
         </div>
     </footer>
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
